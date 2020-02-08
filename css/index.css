@@ -1,0 +1,9 @@
+.username-form,
+.greetings-text,
+.change-name {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
