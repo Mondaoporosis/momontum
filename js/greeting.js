@@ -23,20 +23,20 @@ function askForName() {
   usernameForm.addEventListener("submit", handleSubmit);
 }
 
-function paintGreeting(text) {
-  usernameForm.classList.remove(SHOWING_CN);
-  greeting.classList.add(SHOWING_CN);
-  nameChangeBtn.classList.add(SHOWING_CN);
-  nameChangeBtn.addEventListener("click", changeName);
-  greeting.innerText = `Hello ${text}`;
-}
-
 function changeName() {
   greeting.classList.remove(SHOWING_CN);
   nameChangeBtn.classList.remove(SHOWING_CN);
 
   localStorage.removeItem(USER_LS);
   loadName();
+}
+
+function paintGreeting(text) {
+  usernameForm.classList.remove(SHOWING_CN);
+  greeting.classList.add(SHOWING_CN);
+  nameChangeBtn.classList.add(SHOWING_CN);
+  nameChangeBtn.addEventListener("click", changeName);
+  greeting.innerText = `Hello ${text}`;
 }
 
 function loadName() {
